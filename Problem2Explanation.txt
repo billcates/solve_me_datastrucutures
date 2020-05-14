@@ -14,9 +14,10 @@ Design:
 
 Time Complexity:
   Checks for the file in the dir(n)and recursely iterating n depths(n)
-  As,The function recursively works (i.e)O(depth of the dir*number of dir in each)
+  As,The function recursively works (i.e)O(depth of the dir+number of dir in each)
+  which is similar to O(n+n-1)=O(n)
 
 Space Complexity:
   O(depth)=> For recursive calculations
   O(e)=> For path and files
-  O(depth+e) =>Total complexity
+  O(depth+e) =>Total space utilised

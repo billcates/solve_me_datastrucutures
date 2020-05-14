@@ -16,8 +16,11 @@ Design:
 Complexity:
         *In both the functions ,the given two lists are traversed(n+n)
         (number of nodes in 1 st+number of nodes in 2nd)
-        *A new linked list is also created in both functions ,which also depends
+        *A new linked list is also created in union function ,which also depends
         on the previous present nodes,therefore the sum of all the 3 would give
         the result  O(n1+n2+l)
+        *In intersection function,two linked list are traversed (n+n),the list is
+        traversed and and finds the common elements O(one_list_nodes) and finally new linked
+        list is created which takes O(new).The result would be O(n1+n2+one_list_values+newnode)
         *It takes O(n) blocks for union and intersection list and O(1) for the head
-        and O(1) for tail. 
+        and O(1) for tail.
