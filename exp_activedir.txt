@@ -1,0 +1,19 @@
+Design:
+ With the class of group provided,
+ #we start implementing by getting a group name as parameter,
+ #we check for all the users in the group and check whether the required user is matched
+ #then ,we get the list of groups in the cuurent group
+ #we find the solution recursively,for finding the user in those get_groups
+    #Base condition:len of the groups list is 0,which means no further groups are present
+    #Recursion:
+      calling the parent function again by passing the group list values,
+  #if we can't get the specified user,the function returns None
+
+
+Time Complexity:
+  Checking the condition of whether it is specified takes a constant time
+  but the function recursively calls (i.e)O(depth of the groups*average users of each file in depth)
+Space Complexity:
+    O(depth)=> For recursive calculations
+    O(e)=> For users and groups
+    O(depth+e) =>Total complexity

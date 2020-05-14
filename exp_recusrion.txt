@@ -1,0 +1,22 @@
+Design:
+ With the suffix provided,
+ #we start implementing by getting a suffix name as parameter,
+ #we check for all the files in the dir and create an resultant list which has
+  all the files.
+ #then ,we get the list of folders in the cuurent folder
+ #we find the solution recursively,for getting all the files in the dir provided.
+    #Base condition:len of the groups list is 0,which means no further subdirectories are present
+    #Recursion:
+      calling the parent function again by passing the folders list values,with appending
+      the folder path and the folder name by "/"
+  #return the file array
+
+
+Time Complexity:
+  Checks for the file in the dir(n)and recursely iterating n depths(n)
+  As,The function recursively works (i.e)O(depth of the dir*number of dir in each)
+
+Space Complexity:
+  O(depth)=> For recursive calculations
+  O(e)=> For path and files
+  O(depth+e) =>Total complexity

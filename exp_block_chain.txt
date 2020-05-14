@@ -1,0 +1,19 @@
+Design:
+  @Create a class Block with calc_hash method
+  @In the init method assign timestamp using datetime module
+  Class Blockchain
+    >Initialize the bloack chain class with a head and tail pointer
+    >In the append method
+      *If head is None,create new node and make it as head and tail
+      *else,create a new node and set it as the tail
+    >In the traverse method
+      *If the head is None,return None
+      *else,assign a head to a temporary variable and traverse all the nodes
+Time and Space Complexity
+        Linkedlist
+        =>Append takes place at a constant amount of time,as it just updates The
+          tail pointer.O(1)
+        =>Traverse takes place depends on the number of nodes in the Block
+          O(n)
+        =>Space depends on the number of nodes plus the pointer variables head
+          and tail

@@ -1,0 +1,18 @@
+Design:
+  # First we are having a HuffmanTree class with head to Nodes and function to print path from head to node.
+  # Class Node has character , frequencies ,left and right pointers.
+  # process function process the input string and returns the dictinory of frequencies in sotrted order.
+  # Then in th encode function it constructs the tree with root and finds the path of each
+    seperate character using the path_from_root_to_node function.
+  # The encoded data is passed into the decode function where  the data is decoded and returns the
+    original data back(traveerses the tree).
+
+Time Complexity:
+    It takes O(n) for the iteration of the given data to update the dict.
+    It takes O(n log n) for sorting the dict with the sorted function (same as the min-heap operations).
+    Overall Complexity is O(n*nlogn) for Encoding
+    Overall Complexity is O(n) for Decoding
+
+Space Complexity:
+   O(n) as we are having a dict and HuffmanTree.
+   Other than this we are using some extra Auxilary variables for calculation.

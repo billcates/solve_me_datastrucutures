@@ -1,0 +1,15 @@
+Design:
+ Used dequeue module for providing the priority.
+ When the class is iniated a queue element and a dictionary is also initiated
+ and the num_elements is set to 1. Set the value if the key is not present in the cache.
+ If the cache is at capacity remove the oldest item.As we are using dequeue
+ use popleft.It returns the value of the key using get and returns -1 when
+ value is not present.
+
+ Time complexity:
+    all the operations such as get and set takes a constant time ,as it is lookup
+    in a dictionary O(1)
+
+Space Complexity:
+  A dictionary with the capacity is used and the queue of the capacity is also
+  used.therefore O(capacity)

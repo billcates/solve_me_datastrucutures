@@ -1,0 +1,23 @@
+Design:
+  Union
+    #Initially check whether both the list contains elements,if any one is
+      empty,return the other list
+    #create an set,which would store the values of both the linked
+      lists which are unique
+    #create an linkedlist with the set values and return the
+      new linked list
+  Intersection:
+    #Initially check whether both the list contains elements and if no num_elements
+      are present in any of the list return None
+    #create an list,which would store the common values of both the linked
+      lists
+    #create an linkedlist with the list values and return the
+      new linked list
+Complexity:
+        *In both the functions ,the given two lists are traversed(n+n)
+        (number of nodes in 1 st+number of nodes in 2nd)
+        *A new linked list is also created in both functions ,which also depends
+        on the previous present nodes,therefore the sum of all the 3 would give
+        the result  O(n1+n2+l)
+        *It takes O(n) blocks for union and intersection list and O(1) for the head
+        and O(1) for tail. 
