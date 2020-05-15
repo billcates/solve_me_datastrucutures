@@ -50,16 +50,16 @@ def intersection(linkedlist1,linkedlist2):
             return None
         elif linkedlist2 is None:
             return None
-        list1=[];list2=[]
+        list1=set();list2=set()
         temp=linkedlist1.head
         while temp is not None:
-            list1.append(temp.value)
+            list1.add(temp.value)
             temp=temp.next
         temp=linkedlist2.head
         while temp is not None:
-            list2.append(temp.value)
+            list2.add(temp.value)
             temp=temp.next
-        result=[each for each in list1 if each in list2]
+        result=list1.intersection(list2)
         result_llist=Linkedlist()
         for each in result:
             result_llist.append(each)
@@ -72,12 +72,29 @@ linkedlist2=Linkedlist()
 linkedlist2.append(10)
 linkedlist2.append(15)
 linkedlist2.append(30)
-print(union(linkedlist1,linkedlist2))
+print("Union is")
+print(union(linkedlist1,linkedlist2))#returns 10 -> 12 -> 30 -> 15 -> None
 print("the length of the union list is")
-print(union(linkedlist1,linkedlist2).num_elements)
-print(intersection(linkedlist1,linkedlist2))
+print(union(linkedlist1,linkedlist2).num_elements)#returns 4
+print("Intersection is")
+print(intersection(linkedlist1,linkedlist2))#returns 15 -> None
 print("The length of the intersection list is")
-print(intersection(linkedlist1,linkedlist2).num_elements)
+print(intersection(linkedlist1,linkedlist2).num_elements)#returns 1
 linkedlist3=Linkedlist()
 print("Empty linked list is intersected")
-print(intersection(linkedlist1,linkedlist3))
+print(intersection(linkedlist1,linkedlist3))#returns None
+print("Empty linked list union")
+linkedlist4=Linkedlist()
+linked5=Linkedlist()
+print(union(linkedlist4,linked5))#RETURN None
+linkedlist4.append(20)
+linkedlist4.append(21)
+linkedlist4.append(22)
+linkedlist4.append(23)
+linked5.append(20)
+linked5.append(21)
+linked5.append(22)
+linked5.append(23)
+print("if both the linked lists are same\nthe union is")#returns 20 -> 21 -> 22 -> 23 -> None
+print(union(linkedlist4,linked5))
+print("\nthe intersection is\n",intersection(linkedlist4,linked5))#returns 20 -> 21 -> 22 -> 23 -> None

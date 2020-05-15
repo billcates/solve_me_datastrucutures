@@ -41,6 +41,7 @@ class Blockchain:
 
 #testcases
 #
+print("empty but block created")
 print(" Initial our_block created")
 our_block=Blockchain("college")
 our_block.traverse()
@@ -51,4 +52,9 @@ our_block.append("lecture")
 our_block.traverse()
 print("\n\n\n after adding two elements")
 our_block.append("students")
+our_block.traverse()
+print("More elements added")
+our_block.append("pen")
+our_block.append("note")
+our_block.append("book")
 our_block.traverse()

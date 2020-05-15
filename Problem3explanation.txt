@@ -10,7 +10,7 @@ Design:
 Time Complexity:
     It takes O(n) for the iteration of the given data to update the dict.
     It takes O(n log n) for sorting the dict with the sorted function (same as the min-heap operations).
-    Overall Complexity is O(n*nlogn) for Encoding
+    Overall Complexity is O(nlogn) for Encoding
     Overall Complexity is O(n) for Decoding
 
 Space Complexity:

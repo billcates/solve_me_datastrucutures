@@ -1,14 +1,23 @@
-Design:
- “Least Recently Used (LRU) cache.
- An LRU cache is a type of cache in which we remove the least recently used
- entry when the cache memory reaches its limit.” Here, Cache entries in a
- dictionary and a deque module from the Python collections are used for storage
- and to track the Cache history.
 
- Time complexity:
-    all the operations such as get and set takes a constant time ,as it is lookup
-    in a dictionary O(1)
+Code Design:
+* first we are defining a Double Node class having value, left and right values
+* we are defining a LRU_list which is an implementation of FIFO(queue) linked list having head and tail values and a list dict(as we are expecting O(1) complexity).
+* In that list we can add an Node to the first and remove a node with functions addFirst and remove respectively.
+* In the LRU_Cache class we are using a LRU_list to store the element in order and LRU dict to store key,value pairs.
+* There are also variables to store Capacity and Current size of the cache
+* While appending the values we just update the LRU dict and a node to the LRU_list at first.
+* But when the capacity gets Filled we just remove the tail of the LRU list and del the value in the LRU dict,so that we could add new value.
+* When we use a value from the cache (i.e the get call) we just remove it from the LRU_list and add it to the first so that the order changes.
 
-Space Complexity:
-  A dictionary with the capacity is used and the queue of the capacity is also
-  used.therefore O(capacity)
+
+Efficiency:
+Time complexity:
+ when we are creating the cache it takes O(1).
+ In the Case of set value it takes O(1) in normal case as we are adding the value in LRU as well as in the LRU_list
+ Even in worst case (i.e when the cache memory reaches its capacity) we need to remove the last value in the LRU_list and in the LRU dict.
+ In the Case of it takes O(1) to find the key and O(1) to update the order of the LRU_list, we remove the node and add it to the first in O(1) using a list dict.
+
+ Space Complexity:
+
+  It takes O(3n) => O(n) as we are having a dict in the LRU cache and n Node and a list of nodes in LRU_list.
+  Other than this we are using some extra Auxilary variables for calculation.

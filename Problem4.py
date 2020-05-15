@@ -28,15 +28,12 @@ def is_user_in_group(user, group):
       user(str): user name/id
       group(class:Group): group to check user membership against
     """
-    users=group.get_users()
-    if user in users:
+    if user in group.users:
         return True
-    else:
-        groups=group.get_groups()
-        if len(groups)==0:
-            return False
-        for each in groups:
-            return is_user_in_group(user,each)
+    for group in group.groups:
+        if is_user_in_group(user, group):
+            return True
+
     return False
 
 #test case
@@ -45,7 +42,7 @@ initial_group=Group("initial")
 print("the name of group is "+initial_group.name)
 #check whether this user in empty groups
 print("NO users present ")
-print(is_user_in_group("bill",initial_group))
+print(is_user_in_group("bill",initial_group))#RETURNS FALSE
 print("dir added")
 parent = Group("parent")
 child = Group("child")
@@ -63,4 +60,4 @@ sub_child.add_user("bill")
 # parent->child->sub->child->bill
 #check again
 print("bill is added\n checking for user:bill")
-print(is_user_in_group("bill",parent))
+print(is_user_in_group("bill",parent))#returns true

@@ -9,9 +9,8 @@ Design:
   Intersection:
     #Initially check whether both the list contains elements and if no num_elements
       are present in any of the list return None
-    #create an list,which would store the common values of both the linked
-      lists
-    #create an linkedlist with the list values and return the
+    #create an set,and perform set intersection
+    #create an linkedlist with the set values and return the
       new linked list
 Complexity:
         *In both the functions ,the given two lists are traversed(n+n)
@@ -20,7 +19,11 @@ Complexity:
         on the previous present nodes,therefore the sum of all the 3 would give
         the result  O(n1+n2+l)
         *In intersection function,two linked list are traversed (n+n),the list is
-        traversed and and finds the common elements O(one_list_nodes) and finally new linked
-        list is created which takes O(new).The result would be O(n1+n2+one_list_values+newnode)
+        traversed
+        *For set intersection,If you have n sets (sets, not iterables), you'll do n-1 intersections
+        and the time can be (n-1)O(len(s)) where s is the set with the smallest size.
+        Therefore (2-1)O(n) which is O(n)
+        * finally new linked list is created which takes O(new).
+        *The result would be O(n1+n2+n+newnode)
         *It takes O(n) blocks for union and intersection list and O(1) for the head
         and O(1) for tail.
