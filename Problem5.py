@@ -47,7 +47,7 @@ our_block=Blockchain("college")
 our_block.traverse()
 #initial Block
 #adding new elements to Block
-print("\n\n\n after adding one element")
+print("\n\n\n  one element Block chain")
 our_block.append("lecture")
 our_block.traverse()
 print("\n\n\n after adding two elements")

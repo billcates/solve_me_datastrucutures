@@ -77,31 +77,31 @@ class LRU_Cache(object):
 
 
 #test cases
-# our_cache = LRU_Cache(5)
+our_cache = LRU_Cache(5)
 
-# print(our_cache.cache)
-# our_cache = LRU_Cache(5)
-# our_cache.set(1, 1)
-# our_cache.set(2, 2)
-# our_cache.set(3, 3)
-# our_cache.set(4, 4)
-# print(our_cache.get(1))  # returns 1
-# print(our_cache.get(2))  # returns 2
-# print(our_cache.get(9))  # returns -1
-# our_cache.set(5, 5)
-# our_cache.set(6, 6)
-# print(our_cache.get(3))  # returns -1 because key 3 was thrown out
-# our_cache.set(7, 7)
-# our_cache.get(4)
-# print(our_cache.cache)
+print(our_cache.LRU)
+our_cache = LRU_Cache(5)
+our_cache.set(1, 1)
+our_cache.set(2, 2)
+our_cache.set(3, 3)
+our_cache.set(4, 4)
+print(our_cache.get(1))  # returns 1
+print(our_cache.get(2))  # returns 2
+print(our_cache.get(9))  # returns -1
+our_cache.set(5, 5)
+our_cache.set(6, 6)
+print(our_cache.get(3))  # returns -1 because key 3 was thrown out
+our_cache.set(7, 7)
+our_cache.get(4)
+print(our_cache.LRU)
 
-
-our_cache=LRU_Cache(3)
-our_cache.set(1,1)
-our_cache.set(2,2)
-our_cache.set(3,3)
-our_cache.set(4,4)
-print(our_cache.get(4))   returns= 4
-print(our_cache.get(1))   returns = -1
-our_cache.set(2,4)
-print(our_cache.get(2)) returns 4
+#OVERWRITTEN
+our_cache1=LRU_Cache(3)
+our_cache1.set(1,1)
+our_cache1.set(2,2)
+our_cache1.set(3,3)
+our_cache1.set(4,4)
+print(our_cache1.get(4))   #returns= 4
+print(our_cache1.get(1))   #returns = -1
+our_cache1.set(2,4)
+print(our_cache1.get(2)) #returns 4
